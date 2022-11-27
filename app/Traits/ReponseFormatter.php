@@ -9,18 +9,14 @@ trait ResponseFormatter
     /**
      * Create a new JSON success response instance.
      *
-     * @param  mixed  $data
-     * @param  int  $status
-     * @param  array  $headers
-     * @param  int  $options
-     * @return \Illuminate\Http\JsonResponse
+     * @param int $options
      */
     protected static function success(mixed $data = [], string $message = null, int $status = 200, array $headers = [], $options = 0): JsonResponse
     {
         return response()->json([
             'success' => true,
             'message' => $message,
-            'data' => $data,
+            'data'    => $data,
         ], $status, $headers, $options);
     }
 
@@ -29,7 +25,7 @@ trait ResponseFormatter
         return response()->json([
             'success' => false,
             'message' => $message,
-            'errors' => $errors,
+            'errors'  => $errors,
         ], $code);
     }
 }

@@ -1,0 +1,48 @@
+{
+    "preset": "symfony",
+    "rules": {
+        "binary_operator_spaces": {
+            "operators": {
+                "=>": "align"
+            }
+        },
+        "concat_space": {
+            "spacing": "one"
+        },
+        "increment_style": {
+            "style": "post"
+        },
+        "no_unused_imports": true,
+        "new_with_braces": {
+            "anonymous_class": false
+        },
+        "ordered_imports": {
+            "sort_algorithm": "alpha"
+        },
+        "phpdoc_align": {
+            "align": "left"
+        },
+        "phpdoc_order": true,
+        "phpdoc_separation": true,
+        "phpdoc_summary": true,
+        "phpdoc_to_comment": true,
+        "phpdoc_trim": true,
+        "phpdoc_types": true,
+        "array_indentation": true,
+        "array_syntax": {
+            "syntax": "short"
+        },
+        "list_syntax": {
+            "syntax": "short"
+        },
+        "no_blank_lines_after_phpdoc": true,
+        "yoda_style": {
+            "equal": false,
+            "identical": false,
+            "less_and_greater": false
+        },
+        "phpdoc_add_missing_param_annotation": true,
+        "array_push": true,
+        "use_arrow_functions": true
+    }
+}
