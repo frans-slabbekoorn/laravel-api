@@ -27,8 +27,8 @@ This is a Laravel API boilerplate with built-in cookie based session authenticat
 
 ## Linting
 
-1. Run `composer run pint` or `composer run lint` to run the linter
-2. Run `php artisan pint --test` to run the linter without actually changing the files
+1. Run `./vendor/bin/pint` or `composer run pint` to run the linter
+2. Run `./vendor/bin/pint --test` to run the linter without actually changing the files
 
 ## License
 
