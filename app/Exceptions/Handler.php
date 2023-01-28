@@ -2,7 +2,7 @@
 
 namespace App\Exceptions;
 
-use App\Helpers\Json;
+use App\Helpers\JsonResponse;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Illuminate\Support\Facades\App;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
@@ -42,9 +42,9 @@ class Handler extends ExceptionHandler
      */
     public function register()
     {
-        $this->renderable(fn (NotFoundHttpException $e) => Json::error($this->getTrace($e), 'Route not found', 404));
+        $this->renderable(fn (NotFoundHttpException $e) => JsonResponse::error($this->getTrace($e), 'Route not found', 404));
 
-        $this->renderable(fn (Throwable $e) => Json::error($this->getTrace($e), $e->getMessage(), 500));
+        $this->renderable(fn (Throwable $e) => JsonResponse::error($this->getTrace($e), $e->getMessage(), 500));
     }
 
     /**
